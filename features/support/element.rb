@@ -11,9 +11,15 @@ class Element
     find.visible?
   end
 
-  def isVisible
+  def notVisible
     unless visible?
       raise "element not visible"
+    end
+  end
+
+  def Visible
+    if visible?
+      raise "element is visible"
     end
   end
 
