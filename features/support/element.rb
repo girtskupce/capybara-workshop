@@ -25,7 +25,4 @@ class Element
     find.send_keys value
   end
 
-  def clear
-    find.native.clear
-  end
 end
