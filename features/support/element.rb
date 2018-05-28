@@ -11,9 +11,15 @@ class Element
     find.visible?
   end
 
-  def isVisible
+  def notVisible
     unless visible?
       raise "element not visible"
+    end
+  end
+
+  def Visible
+    if visible?
+      raise "element is visible"
     end
   end
 
@@ -23,9 +29,5 @@ class Element
 
   def send_keys(value)
     find.send_keys value
-  end
-
-  def clear
-    find.native.clear
   end
 end

@@ -1,48 +1,43 @@
 When(/^I am on Appimation home page/) do
-  # visit('/')
-  # unless find(:css, '#logo').visible?
-  #   raise "Logo not visible"
-  # end
   @tests.login_tests.load_home_page
-  @pages.page_home.isVisible
 end
 
-
-
-When(/^I open Try now/) do
-  # find(:css, '#start_button').click
-  # unless find(:css, '#signup').visible?
-  #   raise "element not visible"
-  # end
-  @pages.page_home.openTryNow
+When(/^I open Sign Up form/) do
+  @tests.login_tests.open_sign_up_form
 end
 
-
-Then("I close Try now") do
-  # find(:css, '#signup .closecross').click
-  @pages.page_home.closeTryNow
+When(/^I check whether it's visible/) do
+  @tests.login_tests.sign_up_form_opened
 end
 
-
-When("I enter {string} and {string} in name in contact us") do |name, name2|
-  # unless find(:css, '#name').visible?
-  #   raise "name not visible"
-  # end
-  # find(:css, '#name').send_keys(name)
-  # sleep(2)
-  # find(:css, '#name').native.clear
-  #
-  # find(:css, '#name').send_keys(name2)
-  # sleep(2)
-
-  @pages.page_home.enterName(name)
-  @pages.page_home.clearName
-  sleep(2)
-  @pages.page_home.enterName(name2)
-  sleep(2)
+When(/^I fill Sign Up form/) do
+  @tests.login_tests.fill_signup_form()
 end
 
+When(/^I close Sign Up form/) do
+  @tests.login_tests.close_sign_up_form
+end
 
+When(/I check whether form is closed/) do
+  @tests.login_tests.sign_up_form_closed
+end
 
+When(/^I open Login form/) do
+  @tests.login_tests.open_login_form
+end  
 
+When(/^I check whether Login form is opened/) do
+  @tests.login_tests.login_form_opened
+end
 
+When(/^I fill Login form/) do
+  @tests.login_tests.fill_login_form()
+end  
+
+When(/^I close Login form/) do
+  @tests.login_tests.close_login_form
+end  
+
+When(/^I validate Login form/) do
+  @tests.login_tests.validate_login
+end  

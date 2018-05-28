@@ -1,10 +1,17 @@
 Feature: Demo Feature
 
-    Scenario: Open SignUp Page
-        Given I am on Appimation home page
-        When I open Try now
-        Then I close Try now
+    Scenario: Open Sign Up Form
+        When I am on Appimation home page
+        Then I open Sign Up form
+        Then I check whether it's visible
+        Then I fill Sign Up form
+        Then I close Sign Up form
+        Then I check whether form is closed
 
-    Scenario: I can send contact us message
-        Given I am on Appimation home page
-        When I enter "lalalalla" and "namemname" in name in contact us
+    Scenario: Open Login Form    
+        When I am on Appimation home page
+        Then I open Login form
+        Then I check whether Login form is opened
+        Then I fill Login form
+        Then I close Login form
+        Then I validate Login form
