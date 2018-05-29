@@ -59,10 +59,16 @@ def sign_up_closed
 end
 
 # Fill 'SignUp' form
-def sign_up_form_attributes(email,pass,pass_re,proj_name)
+def sign_up_email(email)
   @signup_email.send_keys(email)
+end
+
+def sign_up_password(pass)
   @signup_pass.send_keys(pass)
-  @signup_pass_repeat.send_keys(pass_re)
+  @signup_pass_repeat.send_keys(pass)
+end
+
+def sign_up_project(proj_name)
   @signup_proj_name.send_keys(proj_name)
 end
 
@@ -75,9 +81,12 @@ def login_form_open_check
   @login_check.notVisible
 end
 
-# Fill 'Login' form's textfields and click on button
-def login_form_attributes(login, login_pass)
+# Fill 'Login' form
+def login_email(login)
   @login_email.send_keys(login)
+end
+
+def login_password(login_pass)
   @login_pass.send_keys(login_pass)
 end
 

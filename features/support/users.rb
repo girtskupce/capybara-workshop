@@ -6,13 +6,12 @@ module Users
     end
 
     class SignUp
-        attr_reader :email, :pass, :pass_re, :proj_name
+        attr_reader :email, :pass, :proj_name
         def initialize(args={})
-            defaults = {email: DateTime.now.strftime('%Q')+'@test.com', pass: 'parole123', pass_re: 'parole123', proj_name:DateTime.now}
+            defaults = {email: DateTime.now.strftime('%Q')+'@test.com', pass: 'parole123', proj_name:DateTime.now}
             args = defaults.merge(args)
             @email = args[:email]
             @pass = args[:pass]
-            @pass_re = args[:pass_re]
             @proj_name = args[:proj_name]
         end
     end    
