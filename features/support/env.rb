@@ -2,18 +2,19 @@ $LOAD_PATH << File.dirname(__FILE__)
 
 require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
-require 'site_prism'
+#require 'site_prism'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'json'
 require 'base64'
-require "chromedriver/helper"
+#require "chromedriver/helper"
+require "webdrivers"
 require_relative 'environment'
 
 
-SitePrism.configure do |config|
-  config.use_implicit_waits = true
-end
+#SitePrism.configure do |config|
+#  config.use_implicit_waits = true
+#end
 Capybara.app_host = Environment.public_send(ENV['ENVIRONMENT'])
 Capybara.save_path = ENV['REPORT_PATH']
 Capybara::Screenshot.autosave_on_failure = false
