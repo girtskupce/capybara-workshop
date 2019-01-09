@@ -37,7 +37,7 @@ end
 
 # Check whether Apimation logo is visible
 def logo_check
-  @logo_check.notVisible
+  @logo_check.Visible
 end
 
 # Open 'Sign Up' form and check whether it's visible
@@ -46,7 +46,7 @@ def open_sign_up_form
 end
 
 def sign_up_visible
-  @signup_check.notVisible
+  @signup_check.Visible
 end
 
 # Close 'Sign Up' form and check whether it's visible
@@ -78,7 +78,7 @@ def open_login_form
 end
 
 def login_form_open_check
-  @login_check.notVisible
+  @login_check.Visible
 end
 
 # Fill 'Login' form
@@ -97,7 +97,7 @@ end
 # Check whether 'Login' form is visible
 def login_error_check
   sleep(1)
-  @login_error_check.notVisible
+  @login_error_check.Visible
 end
 
 end
