@@ -20,7 +20,7 @@ Capybara::Screenshot.prune_strategy = :keep_last_run
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
-Capybara.default_driver = :selenium_headless
+Capybara.default_driver = :selenium_chrome_headless
 #Capybara.default_driver = :mechanize
 # =============================================================== #
 #######################################################################
