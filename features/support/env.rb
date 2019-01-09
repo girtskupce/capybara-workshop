@@ -2,7 +2,7 @@ $LOAD_PATH << File.dirname(__FILE__)
 
 require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
-require 'site_prism'
+#require 'site_prism'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'json'
