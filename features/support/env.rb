@@ -8,11 +8,8 @@ require 'selenium-webdriver'
 require 'json'
 require 'base64'
 require 'chromedriver/helper'
+require 'webdrivers'
 
-
-SitePrism.configure do |config|
-  config.use_implicit_waits = true
-end
 Capybara.app_host = 'http://www.apimation.com'
 Capybara.save_path = 'report/'
 Capybara::Screenshot.autosave_on_failure = false
